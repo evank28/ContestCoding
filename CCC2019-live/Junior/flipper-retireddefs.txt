@@ -1,0 +1,15 @@
+"""
+def vFlip(grid):
+    newGrid=[grid[1],grid[0]]
+    return newGrid
+
+def hFlip(grid):
+    newGrid=[[grid[0][1],grid[0][0]], [grid[1][1],grid[1][0]]]
+    return newGrid
+
+    if V%2!=0:
+        newGrid=vFlip(newGrid)
+    if H%2!=0:
+     newGrid=hFlip(newGrid)
+
+"""
