@@ -18,27 +18,29 @@ import sys
 #
 
 def kDifference(a, k):
-    sor = a.sort()
+    a.sort()
     count=0
-    for i in range(len(sor)):
+    l = len(a)
+    for i in range(l):
         sub=i+1
-        while sor[sub]<=sor[i]+2:
-            if sor[sub]==sor[i]+2:
+        while sub<l and a[sub]<=a[i]+2:
+            if a[sub]==a[i]+2:
                 count+=1
             sub+=1
     return count
 #idea make use of sorting it (and sets of some sort?) for faster checking
 if __name__ == '__main__':
 
-    a_count = int(input().strip())
+    a_count = 100#int(input().strip())
 
-    a = []
-
+    a = [random.randint(0,1000) for i in range (a_count)]# []
+    """
     for _ in range(a_count):
         a_item = int(input().strip())
         a.append(a_item)
+    """
 
-    k = int(input().strip())
+    k = random.randint(1,9) #int(input().strip())
 
     result = kDifference(a, k)
 
