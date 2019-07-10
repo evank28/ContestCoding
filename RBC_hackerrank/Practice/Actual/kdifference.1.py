@@ -29,6 +29,7 @@ def kDifference(a, k):
             sub+=1
     return count
 #idea make use of sorting it (and sets of some sort?) for faster checking
+
 if __name__ == '__main__':
 
     a_count = 100#int(input().strip())
