@@ -4,16 +4,18 @@ for i in range(repeats):
     messages.append(input())
 
 import time
+
 start_time = time.time()
 
 encoding = []
+
 
 def SetOfListInOrder(incominglist):
     from collections import OrderedDict
     outtemp = OrderedDict()
     for item in incominglist:
         outtemp[item] = None
-    return(list(outtemp))
+    return (list(outtemp))
 
 
 for message in messages:
@@ -24,4 +26,4 @@ for message in messages:
     print(" ".join(final_arr))
 
 end_time = time.time()
-print(end_time-start_time)
+print(end_time - start_time)

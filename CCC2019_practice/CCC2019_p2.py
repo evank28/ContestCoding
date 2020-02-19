@@ -1,7 +1,7 @@
-#s1
+# s1
 N = int(input())
-swifts = list(map(lambda x:int(x),input().split(" ")))
-sema = list(map(lambda x:int(x),input().split(" ")))
+swifts = list(map(lambda x: int(x), input().split(" ")))
+sema = list(map(lambda x: int(x), input().split(" ")))
 
 """
 K = 0
@@ -14,15 +14,14 @@ while K<=N:
 print(Kequal)
 """
 
-Sswifts = sum(swifts)
-Ssema = sum(sema)
+s_swifts = sum(swifts)
+s_sema = sum(sema)
 
-""
-K =N-1
-while K>=0:
-        Sswifts -= swifts[K]
-        Ssema -= sema[K]
-        if (Sswifts) == (Ssema):
-                print(K+1)
-                break
-        K-=1
+K = N - 1
+while K >= 0:
+    s_swifts -= swifts[K]
+    s_sema -= sema[K]
+    if s_swifts == s_sema:
+        print(K + 1)
+        break
+    K -= 1

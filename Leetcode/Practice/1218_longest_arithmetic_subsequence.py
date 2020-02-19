@@ -1,9 +1,16 @@
 from typing import List
 from collections import defaultdict
 
+
+# noinspection PyMethodMayBeStatic
 class Solution:
     def longestSubsequence(self, arr: List[int], difference: int) -> int:
         """
+        Given an integer array `arr` and an integer `difference`, return the
+        length of the longest subsequence in `arr` which is an arithmetic
+        sequence such that the difference between adjacent elements in the
+        subsequence equals `difference`.
+
         >>> s = Solution()
         >>> s.longestSubsequence([1,2,3,4], 1)
         4

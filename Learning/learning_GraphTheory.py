@@ -2,12 +2,12 @@
 #from https://eddmann.com/posts/depth-first-search-and-breadth-first-search-in-python/
 from collections import deque
 
-graph = {'A': set(['B', 'C']),          #adjacency list format  
-         'B': set(['A', 'D', 'E']),
-         'C': set(['A', 'F']),
-         'D': set(['B']),
-         'E': set(['B', 'F']),
-         'F': set(['C', 'E'])} 
+graph = {'A': {'B', 'C'},  #adjacency list format
+         'B': {'A', 'D', 'E'},
+         'C': {'A', 'F'},
+         'D': {'B'},
+         'E': {'B', 'F'},
+         'F': {'C', 'E'}}
 
 def iDFSl (graph, start):
     """
@@ -37,7 +37,7 @@ def iDFSl_path (graph, start, goal):
             visited.add(vertex)                     #adds the vertext to the visited list
             stack.extend(graph[vertex]-visited)     #adds ONLY unvisited adjacencies to the stack
 
-    return visited     
+    return visited
 
 
 def rDFSl (graph, start, visited=None):
@@ -72,7 +72,7 @@ def iBFSl (graph, start):
 
 """
 def aStar ()
-"""    
+"""
 
 
 def rBFSl (graph, start):
@@ -83,7 +83,7 @@ def rBFSl (graph, start):
 
     for adj in graph[start]-visited:
         pass
-        
+
 
 
 

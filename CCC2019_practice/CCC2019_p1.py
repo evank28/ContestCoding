@@ -1,10 +1,10 @@
-#j1
+# j1
 N = int(input())
-ways =[]
+ways = []
 
-for i in range (0,6):
-    for j in range (0,6):
-        if i+j==N and i>=j:
-             ways.append((i,j))
+for i in range(0, 6):
+    for j in range(0, 6):
+        if i + j == N and i >= j:
+            ways.append((i, j))
 
 print(len(ways))

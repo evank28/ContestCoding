@@ -1,9 +1,13 @@
 from collections import defaultdict
 from typing import List
 
+
+# noinspection PyMethodMayBeStatic
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         """
+        Given a non-empty array of integers, return the k most frequent
+        elements.
         >>> s = Solution()
         >>> s.topKFrequent(nums = [1,1,1,2,2,3], k = 2)
         [1, 2]

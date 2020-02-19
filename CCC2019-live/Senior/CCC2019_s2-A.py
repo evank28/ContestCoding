@@ -1,23 +1,25 @@
-#CCC2019_s2.py
-#Evan Kanter
-#2019-02-20
+# CCC2019_s2.py
+# Evan Kanter
+# 2019-02-20
 from math import sqrt
 
 T = int(input())
-lines = [int(input()) for each in range (0,T)]
+lines = [int(input()) for each in range(0, T)]
 
-max = 2*max(lines)
+maximum = 2 * max(lines)
 
-## THE FASTER ALTERNATIVE APPROACH TO THIS IS TO CREATE A BOOLEAN LIST TO DISTINGUISH PRIMES UP TO 2*max
-isPrime = [True for i in range (0, max+1)]
+# THE FASTER ALTERNATIVE APPROACH TO THIS IS TO CREATE A BOOLEAN LIST TO
+# DISTINGUISH PRIMES UP TO 2*maximum
 
-for j in range (2,int(sqrt(max))):
+isPrime = [True for i in range(0, maximum + 1)]
+
+for j in range(2, int(sqrt(maximum))):
     if isPrime[j]:
-        for k in range (j, max+1,j):
-            isPrime[k]=False
+        for k in range(j, maximum + 1, j):
+            isPrime[k] = False
 
 for each in lines:
-    for i in range(0,max):
-       if isPrime[i] and isPrime[each*2-i]:
-           print(str(i)+" "+str(each*2-i))
-           break
+    for i in range(0, maximum):
+        if isPrime[i] and isPrime[each * 2 - i]:
+            print(str(i) + " " + str(each * 2 - i))
+            break
