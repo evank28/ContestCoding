@@ -19,9 +19,9 @@ class Solution:
             return 1
         if len(n) <= 1:
             return str(int(n)-1)
-        if n[0] == "1" and n[1:-1] == (len(n)-2)*"0" and n[-1] in ["0", "1"]:
-            return (len(n)-1)*"9"
-        if n == "9"*len(n):
+        if n[0] == "1" and n[1:-1] == (len(n)-2) * "0" and n[-1] in ["0", "1"]:
+            return (len(n)-1) * "9"
+        if n == "9" * len(n):
             return "1" + "0" * (len(n)-1) + "1"
         else:
             half = n[:len(n)//2]
