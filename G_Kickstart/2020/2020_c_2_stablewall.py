@@ -50,6 +50,18 @@ if __name__ == "__main__":
             last = row
         if stable:
             order = order.join(shapes)
+            # Sort the conditions
+            afters = set([x[1] for x in conditions])
+            firsts = [shape for shape in first_row if shape not in afters]
+            i = 0
+            for first in enumerate(firsts):
+                ind = order.index(first)
+                if ind > i:
+                    order = swap(order, ind, i)
+                i += 1
+            # for first in firsts:
+
+            # Use the conditions to sort the ordered shapes
             swaps = float('inf')
             while swaps:
                 swaps = 0

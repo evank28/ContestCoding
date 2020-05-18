@@ -18,45 +18,5 @@ if __name__ == "__main__":
     for t in range(1,T+1):
         R, C = list(map(int, input().split(" ")))
         rows = [input() for _ in range(R)]
-        order = ""
-        conditions = set()
-        stable = True
-        last = []
-        shapes = set()
-        for r, row in enumerate(reversed(rows)):
-            if r > 0:
-                for j, a in enumerate(row):
-                    below = last[j]
-                    if a != 'X':
-                        if below == 'X':
-                            stable = False
-                            break
-                        elif below != a:
-                            condition = (below, a)
-                            if condition not in conditions:
-                                conditions.add(condition)
-                        if a not in shapes:
-                            shapes.add(a)
-                if not stable:
-                    break
-            else:
-                # top row
-                for a in row:
-                    if a != 'X':
-                        shapes.add(a)
-            last = row
-        if stable:
-            order = order.join(shapes)
-            swaps = float('inf')
-            while swaps:
-                swaps = 0
-                for before, after in conditions:
-                    index_before = order.index(before)
-                    index_after = order.index(after)
-                    if index_before > index_after:
-                        order = swap(order, index_before, index_after)
-                        swaps += 1
-            out = order
-        else:
-            out = -1
+
         print("Case #{}: {}".format(t,out))
