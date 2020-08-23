@@ -1,8 +1,0 @@
-hypothesis
-pytest
-pygame
-matplotlib
-flask
-mido
-numpy
-python-ta>=1.4.0
