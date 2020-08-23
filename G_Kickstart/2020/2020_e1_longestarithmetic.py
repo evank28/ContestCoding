@@ -11,11 +11,10 @@ if __name__ == "__main__":
         i, j = 0, 1
         difference = arr[j] - arr[0]
         while j < N:
-            if arr[j] - arr[j-1] == difference:
-                longest = max(j - i + 1, longest)
-            else:
-                difference = arr[j] - arr[j-1]
+            if arr[j] - arr[j-1] != difference:
+                difference = arr[j] - arr[j - 1]
                 i = j - 1
+            longest = max(j - i + 1, longest)
             j += 1
 
         print("Case #{}: {}".format(t,longest))
